@@ -9,6 +9,11 @@ public class CreateNewFood {//s
             foodX = rand.nextInt(width);
             foodY = rand.nextInt(height);
 
+            for (Corner c : snake.getParts()) {
+                if(c.x == foodX && c.y == foodY) {
+                    continue start;
+                }
+            }
             break;
         }
     }
